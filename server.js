@@ -24,7 +24,7 @@ io.on('connection', (socket) => {
 app.post('/proxy', async (req, res) => {
     console.log('Получено тело запроса:', req.body);
     try {
-        const response = await axios.post('https://llm.api.cloud.yandex.net/foundationModels/v1/completion', req.body, {
+        const response = await axios.post('none', req.body, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Api-Key ${apiKey}`,
